@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>课程背景，Python实现线性回归教程-慕课网</title>
+    <meta property="qc:admins" content="77103107776553571676375" />
+    <meta property="wb:webmaster" content="c4f857219bfae3cb" />
+    <meta name="description" content="超酷的互联网、IT技术免费学习平台，创新的网络一站式学习、实践体验；服务及时贴心，内容专业、有趣易学。专注服务互联网工程师快速成为技术高手！" />
+    <meta name="HandheldFriendly" content="True">
+    <meta name="MobileOptimized" content="320">
+    <meta name="viewport" content="width=device-width, initial-scale=1,maximum-scale=1">
+    <meta http-equiv="Cache-Control" content="no-transform " />
+    <meta http-equiv="Cache-Control" content="no-siteapp" />
+    <meta http-equiv="cleartype" content="on">
+
+    <meta name="msapplication-TileImage" content="/wap/img/touch/apple-touch-icon-144x144-precomposed.png">
+    <meta name="msapplication-TileColor" content="#222222">
+    <link rel="stylesheet" href="/statics/css/normalize.css">
+    <link rel="stylesheet" href="/statics/css/style.css">
+    <link rel="stylesheet" href="/statics/css/main.css">
+    <link rel="stylesheet" href="/statics/css/base.css">
+
+    <link rel="canonical" href="https://www.imooc.com/video/16903">
+    <link rel="miphtml" href="https://m.imooc.com/mip/video/16903">
+    <link rel="stylesheet" href="/statics/css/course.css">
+    <script src="/statics/js/jquery.min.js"></script>
+</head>
+<body>
+
+<header>
+    <div class="newheader">
+        <a class="imwap-arrow_l goback l" href="/index.php?m=mooc&c=index&a=course&id={$v['id']}"></a>
+
+        <span class='js-header-name header-name l'>
+           {$sec[0]['title']}
+            </span>
+    </div>
+</header>
+
+<div style="height:1rem"></div>
+
+
+<section class="video-wrap clearfix">
+    <div id="video" class="video-box" style="position:relative;">
+        <!--<img src="http://img2.mukewang.com/5abcbc5f0001b07d07200480-590-330.jpg" alt="课程背景" width="100%" style="position:absolute;top:0;left:0;">-->
+        <video src="/statics/6.2.1.mp4" alt="课程背景" width="100%" style="position:absolute;top:0;left:0;"controls></video>
+    </div>
+
+</section>
+
+<menu class="learn-menu">
+   <!-- <a href="#">介绍</a>-->
+    <a class="cur" href="javascript:;">章节</a>
+<!--    <a href="#">问答</a>
+    <a href="#">笔记</a>-->
+</menu>
+
+<section class="course-container course-video">
+    <ul class="course-chapter">
+        {loop $chapters $k $v}
+        <li>
+            <h3 class="chapter-title">{$v['title']}</h3>
+            <ul class="course-sections">
+                {loop $v['sections'] $k1 $v1}
+                <li {if $v1['id']==$id && $v1['cid']==$cid}class="course-section-current"{/if}>
+                <i class="section-icon section-icon-video"></i>
+                <a data-id="16703"  href="/index.php?m=mooc&c=index&a=lesson&id={$v1['id']}&cid={$v1['cid']}">
+                    {$v1['title']}
+                </a>
+                <i class="section-state-icon"></i>
+                </li>
+                {/loop}
+            </ul>
+        </li>
+        {/loop}
+    </ul>
+</section>
+
+
+</body>
+<script>
+    $(function(){
+      $('.course-sections>li').on('click',function () {
+          $(this).addClass('course-section-current');
+      })
+    })
+</script>
+</html>
